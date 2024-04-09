@@ -1,0 +1,13 @@
+{
+"app_id": "wx9c56270e68580111",
+"app_secret": "ce624585cb5764952c5b0e58d36592bc",
+"template_id": "MIPoVtgSIYic9BEqk-bqL0rZ0m8_Hv0sApX1hrOsNZ4",
+"user": ["oqPGO6OyGWUNvmXcKQFGSwxpUPlQ", "oqPGO6K7giuSSc5HecT-W-E-MgrA"],
+"weather_key": "42d7cae14927489b9b32895c3b73b37d",
+"region": "上虞区",
+"birthday1": {"name": "小车", "birthday": "2001-02-13"},
+"birthday2": {"name": "小鱼", "birthday": "2001-05-09"},
+"love_date": "2024-03-01",
+"note_ch": "",
+"note_en": ""
+}

@@ -1,0 +1,27 @@
+name: weixin
+on:
+  workflow_dispatch:
+  schedule: 
+    - cron: '0 1 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        run: |
+          mkdir -p /opt/python/3.9.1
+          cd /opt/python/3.9.1
+          wget https://github.com/actions/python-versions/releases/download/3.9.1-96692/python-3.9.1-linux-20.04-x64.tar.gz
+          tar -xzvf python-3.9.1-linux-20.04-x64.tar.gz
+          export PATH="/opt/python/3.9.1/bin:$PATH"
+      - name: Set timezone
+        run: |
+          cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+      - name: install pip packages
+        run: |
+          python -m pip install --upgrade pip
+          pip3 install -r requirements.txt
+      - name: weixin
+        run: |
+          python3 main.py
